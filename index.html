@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamTanque - Assinatura de Filmes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .signature {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .signature h2 {
+            margin-top: 0;
+            color: #444;
+        }
+        .signature p {
+            font-size: 18px;
+            color: #666;
+        }
+        footer {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>StreamTanque</h1>
+        <p>Assine agora e veja os melhores filmes de tanques!</p>
+    </header>
+
+    <div class="container">
+        <div class="gallery">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Defense.gov_News_Photo_041027-F-2034C-010.jpg" alt="Tanque 1">
+            <img src="data:image/jpeg;base64,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" alt="Tanque 2">
+            <img src="https://i0.wp.com/smartencyclopedia.eu/wp-content/uploads/2021/05/origin.jpg?resize=1024%2C570&ssl=1" alt="Tanque 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwSHbyw7EwwpQHqP-3ZTZLjbTgIsEjmXoVcA&s" alt="Tanque 4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsxp_e_RAz7pOv8AaXpF_JP-0AdXZrkcmclw&s" alt="Tanque 5">
+        </div>
+
+        <div class="signature">
+            <h2>Assinatura Premium</h2>
+            <p><strong>Preço:</strong> R$ 29,90/mês</p>
+            <p><strong>Inclui:</strong> Acesso ilimitado a todos os filmes e documentários sobre tanques.</p>
+            <p><strong>Benefícios:</strong> Conteúdo exclusivo, sem anúncios, e suporte ao cliente 24/7.</p>
+            <button style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Assine Agora</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 StreamTanque. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
